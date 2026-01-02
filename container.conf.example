@@ -1,0 +1,21 @@
+# Distrobox AI Container Configuration
+# Copy this file to container.conf and customize as needed
+
+# Container name (required)
+CONTAINER_NAME="my-ai-env"
+
+# Base image for the container
+IMAGE="ubuntu:24.04"
+
+# Workspace directory path (will be mounted to /workspace in container)
+# Default: ~/ai-workspace
+WORKSPACE_PATH="$HOME/ai-workspace"
+
+# Ollama models directory (inside the container)
+OLLAMA_MODELS_DIR="/workspace/ollama/models"
+
+# Additional packages to install (space-separated)
+ADDITIONAL_PACKAGES=""
+
+# Additional distrobox create flags
+ADDITIONAL_FLAGS="--userns=keep-id"
